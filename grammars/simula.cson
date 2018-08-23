@@ -6,12 +6,84 @@
 "fileTypes": [
     'sim'
 ]
+'firstLineMatch': '^#![ \\t]*/.*\\bsimula[\\d\\.]*\\b'
 "limitLineLength": false
 
 "patterns": [
     {
-        "comment": 'Use this to explain the function of the rule, if necessary'
-        "name": 'comment.line.example'
-        "match": '#.*$'
+        "match": "begin|end"
+        "name": "keyword.other.simula"
+    }
+
+    {
+        'match': '\\b(class)\\b'
+        'name': 'support.class.simula'
+    }
+
+    {
+        'match': '\\b(([0-9]+\\.?[0-9]*)|(\\.[0-9]+))\\b'
+        'name': 'constant.numeric.simula'
+    }
+
+    {
+        'comment': 'keywords that delimit flow conditionals'
+        'match': '\\b(if|elif|else|then)\\b'
+        'name': 'keyword.control.conditional.simula'
+    }
+
+    {
+        'comment': 'keywords that delimit loops'
+        'match': '\\b(for|while|until|do)\\b'
+        'name': 'keyword.control.repeat.simula'
+    }
+
+    {
+        'comment': 'keywords that alter flow from within a block'
+        'match': '\\b(exit|with|break|continue|pass|return|yield(\\s+from)?|await)\\b'
+        'name': 'keyword.control.statement.simula'
+    }
+
+    {
+        'comment': 'keyword operators that evaluate to True or False'
+        'match': '\\b(and|in|is|not|or)\\b'
+        'name': 'keyword.other.logical.simula'
+    }
+
+    {
+        'match': '<\\=|>\\=|\\=\\=|<|>|\\!\\='
+        'name': 'keyword.operator.comparison.simula'
+    }
+
+    {
+        'match': '\\+\\=|-\\=|\\*\\=|/\\=|//\\=|%\\=|&\\=|\\|\\=|\\^\\=|>>\\=|<<\\=|\\*\\*\\='
+        'name': 'keyword.operator.assignment.augmented.simula'
+    }
+
+    {
+        'match': '\\+|\\-|\\*|\\*\\*|/|//|%|<<|>>|&|\\||\\^|~'
+        'name': 'keyword.operator.arithmetic.simula'
+    }
+
+    {
+        'match': '\\='
+        'name': 'keyword.operator.assignment.simula'
+    }
+
+    {
+        'begin': "(')"
+        'end': "(')"
+        'name': 'string.quoted.single.simula'
+    }
+
+    {
+        'begin': '(")'
+        'end': '(")'
+        'name': 'string.quoted.double.simula'
+    }
+
+    {
+        'begin': '(""")'
+        'end': '(""")'
+        'name': 'string.quoted.triple.simula'
     }
 ]
