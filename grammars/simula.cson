@@ -11,6 +11,12 @@
 
 "patterns": [
     {
+        'begin': '\\*\\*\\*'
+        'end': '\\*\\*\\*'
+        'name': 'comment.block.simula'
+    }
+
+    {
         "match": "begin|end"
         "name": "keyword.other.simula"
     }
@@ -86,4 +92,10 @@
         'end': '(""")'
         'name': 'string.quoted.triple.simula'
     }
+
+    {
+        'name': 'entity.name.type.simula'
+        'match': '\\b(text|integer|real|value|procedure|boolean|name)\\b'
+    }
+
 ]
