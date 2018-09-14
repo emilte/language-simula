@@ -45,7 +45,7 @@
 
     {
         'comment': 'keywords that delimit loops'
-        'match': '\\b(for|while|until|do)\\b'
+        'match': '\\b(for|while|until|do|step)\\b'
         'name': 'keyword.control.repeat.simula'
     }
 
