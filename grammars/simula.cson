@@ -17,7 +17,13 @@
     }
 
     {
-        "match": "begin|end"
+        'begin': '!'
+        'end': '$'
+        'name': 'comment.block.simula'
+    }
+
+    {
+        "match": "\\b(begin|end|external|new|none)\\b"
         "name": "keyword.other.simula"
     }
 
@@ -76,26 +82,14 @@
     }
 
     {
-        'begin': "(')"
-        'end': "(')"
-        'name': 'string.quoted.single.simula'
-    }
-
-    {
         'begin': '(")'
         'end': '(")'
         'name': 'string.quoted.double.simula'
     }
 
     {
-        'begin': '(""")'
-        'end': '(""")'
-        'name': 'string.quoted.triple.simula'
-    }
-
-    {
+        'match': '\\b(text|integer|real|value|procedure|boolean|name|entity|long)\\b'
         'name': 'entity.name.type.simula'
-        'match': '\\b(text|integer|real|value|procedure|boolean|name)\\b'
     }
 
 ]
