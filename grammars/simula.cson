@@ -12,7 +12,7 @@
 "patterns": [
     {
         'match': '[a-zA-Z]+[a-zA-Z0-9]*(?=\\()'
-        'name': 'entity.name.function.python'
+        'name': 'entity.name.function.simula'
     }
 
     {
@@ -23,7 +23,7 @@
 
     {
         'begin': '!'
-        'end': '(;|$)'
+        'end': '(;)'
         'name': 'comment.block.simula'
     }
 
@@ -62,7 +62,7 @@
 
     {
         'comment': 'keyword operators that evaluate to True or False'
-        'match': '\\b(and|in|is|not|or)\\b'
+        'match': '\\b(and|in|is|not|or|true|false)\\b'
         'name': 'keyword.other.logical.simula'
     }
 
